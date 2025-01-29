@@ -14,7 +14,7 @@ html{
     box-sizing: border-box;
     scroll-behavior: smooth;
     font-size: 16px;
-    background-color: #191919;
+    background-color: #333652;
 }
 
 html, textarea{
@@ -22,31 +22,30 @@ html, textarea{
 }
 
 html, #connect a{
-    color: aliceblue;
+    color: #e9eaec;
 }
 
 header{
     position: fixed;
-    padding: 0 30px;
     height: 50px;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
     z-index: 50;
     font-size: 20px;
-    background-color: #087a99;
+    background-color: none;
 }
  
-header, header a, #send{
-    color: aliceblue;
+header, header a{
+    color: #fad02c;
 }
 
 h2{
     font-weight: 700;
-    color:#2c9ebd;;
+    color:#fad02c;
 }
 
 h3, #connect>p{
-    color: aliceblue;
+    color: #e9eaec;
     font-size: 30px;
     font-weight: 500;
 }
@@ -88,7 +87,7 @@ h3, #connect>p{
 /* flex classes */
 
 .img_bg_visual{
-    background-color: aliceblue;
+    background-color: #e9eaec;
     margin-bottom: 10px;
 }
 
@@ -104,14 +103,36 @@ h3, #connect>p{
 #main_panel{
     position: relative;
     width: 100%;
-    max-width: 1280px;
+    /* max-width: 1280px; */
+    background-image: url("/assets/bg.jpg");
+    background-size: cover;
+    /* background-position: center; */
+    background-repeat: no-repeat;
 }
 
 #main_panel>article{
+    /*modern browser only*/
+    /* aspect-ratio: 16 / 9; */
+    /* background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; */
+    /* width: calc(100vmin * (16 / 9)); */
     min-height: 100vmin;
     max-width: 900px;
     width: 100%;
     padding: 0 10px;
+}
+
+#intro{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* padding: 0 100px; */
+}
+
+#contact_me{
+    display: flex;
+    justify-content: center;
 }
 
 #dp{
@@ -141,10 +162,6 @@ h3, #connect>p{
     font-family: 'Bebas Neue', sans-serif;
 }
 
-#intro{
-    justify-content: space-between;
-}
-
 #skill img{
     width: 90px;
     height: 90px;
@@ -155,14 +172,19 @@ h3, #connect>p{
 }
 
 h3+ul li, #projects h2+ul li{
-    /* border: 5px solid #2c9ebd; */
-    background-color: #2c9ebd;
+    background-color: #90adc6;
     border-radius: 10px;
     padding: 10px 10px 20px;
 }
 
 #projects, #skill{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+}
+
+#projects a{
+    color: #e9eaec;
 }
 
 #projects img, #projects div{
@@ -183,6 +205,8 @@ h3+ul li, #projects h2+ul li{
 
 #connect{
     min-width: 300px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
@@ -203,15 +227,20 @@ h3+ul li, #projects h2+ul li{
 
 fieldset{
     border-radius: 10px;
-    border: 2px solid #2c9ebd;
+    border: 2px solid #fad02c;
     padding: 10px 10px 15px;
+}
+
+#contact_form{
+    display: flex;
+    align-items: center;
 }
 
 #contact_form legend{
     text-align: center;
     padding: 0 10px;
     font-size: 20px;
-    color: aliceblue;
+    color: #e9eaec;
 }
 
 input, textarea{
@@ -241,7 +270,8 @@ textarea{
     width: 200px;
     border: 2px solid transparent;
     border-radius: 10px;
-    background-color: #2c9ebd;
+    color: #e9eaec;
+    background-color: #7692ab;
     transition: background-color .5s, border .5s;
     cursor: pointer;
 }
@@ -257,25 +287,30 @@ footer p{
 
 /* hover */
 #navbar a:hover{
-    background-color: #191919;
+    background-color: #1d213b;
     /* border-radius: 5px; */
 }
 
 #send:hover{
-    background-color: #191919;
-    border: 2px solid #2c9ebd;
+    background-color: #1d213b;
+    border: 2px solid #7692ab;
 }
 
 #connect li p:hover{
-    border-bottom: 2px solid #2c9ebd;
+    border-bottom: 2px solid #fad02c;
 }
 
 @media (max-width: 900px) {
 
+header{
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
 #burger div{
     width: 30px;
     height: 5px;
-    background-color: aliceblue;
+    background-color: #fad02c;
     margin: 5px 0;
 }
 
@@ -312,10 +347,6 @@ footer p{
     max-width: 600px;
 }
 
-#contact_me{
-    flex-direction: column;
-}
-
 #connect{
     margin: 50px 0;
 }
@@ -336,6 +367,10 @@ footer p{
 }
 
 @media (max-width: 600px) {
+    header{
+        padding: 0 10px;
+    }
+
     #skill_webdev h3+ul, #skill_other h3+ul{
         flex-wrap: wrap;
     }
@@ -348,10 +383,25 @@ footer p{
         width: 80px;
         height: 80px;
     }
+
+    #contact_me{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 @media (max-width: 320px){
+    header{
+        padding: 0 5px;
+    }
+
     #dp+section{
         min-height: 500px;
     }
+
+    
+    #skill ul, #projects ul{
+        margin: 20px 0;
+    }
+
 }
