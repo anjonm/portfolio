@@ -1,7 +1,7 @@
 const burger = document.querySelector('#burger');
 const menu = document.querySelector('#burger+ul');
 
-menu.style.display = 'none';
+// menu.style.display = 'none';
 
 burger.addEventListener('click', function (e) {
 	if (menu.style.display === 'block') {
