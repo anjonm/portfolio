@@ -306,6 +306,14 @@ footer p{
 
 @media (max-width: 900px) {
 
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
 header{
     justify-content: space-between;
     padding: 0 20px;
@@ -333,10 +341,6 @@ header{
     right: 30px;
     display: none;
     padding-top: 8px;
-}
-
-#burger+ul.show{
-    display: block;
 }
 
 #burger+ul a{
