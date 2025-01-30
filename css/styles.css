@@ -305,15 +305,6 @@ footer p{
 }
 
 @media (max-width: 900px) {
-
-.hide{
-    display: none;
-}
-
-.show{
-    display: block;
-}
-
 header{
     justify-content: space-between;
     padding: 0 20px;
