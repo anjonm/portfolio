@@ -1,6 +1,8 @@
 const burger = document.querySelector('#burger');
 const menu = document.querySelector('#burger+ul');
 const form = document.querySelector('#contact_form');
+const msgRecieve = document.querySelector('#receive');
+const msgClose = document.querySelector('#close');
 
 // menu.style.display = 'none';
 
@@ -18,6 +20,10 @@ document.addEventListener('click', function (e) {
 			menu.style.display = 'none';
 		}
 	}
+
+	if (e.target.id == 'receive' || e.target.id == 'close') {
+		msgRecieve.classList.add('hide');
+	}
 });
 
 form.addEventListener('submit', (e) => {
@@ -30,7 +36,7 @@ form.addEventListener('submit', (e) => {
 		if (xhr.readyState !== XMLHttpRequest.DONE) return;
 		if (xhr.status === 200) {
 			form.reset();
-			alert('Message Recieve! We will get back to you soon!');
+			msgRecieve.classList.remove('hide');
 		} else {
 			alert('Sorry, there was an error. Please try again later.');
 		}

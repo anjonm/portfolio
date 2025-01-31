@@ -40,9 +40,14 @@ h2{
     font-family: "RoxboroughCF", "Sorts Mill Goudy", sans-serif;
     font-weight: 700;
     color:#fad02c;
+    font-size: 40px;    
 }
 
-h3, #intro h2+p, header, input[name="send"]{
+article h2{
+    margin-top: 50px;
+}
+
+h3, #intro h2+p, header, #send, #close{
     font-family: "Montserrat", "Sorts Mill Goudy", sans-serif;
     font-weight: bold;
 }
@@ -59,14 +64,6 @@ h3, #connect>p{
 
 .font_20{
     font-size: 20px;
-}
-
-.font_40{   
-    font-size: 40px;
-}
-
-.margin_top_50{
-    margin-top: 50px;
 }
 
 /* flex classes */
@@ -250,7 +247,8 @@ input, textarea{
     width: 100%;
     font-size: 16px;
     padding: 2px 0 2px 5px;
-    margin-bottom: 10px;font-family: "Montserrat", "Sorts Mill Goudy", sans-serif;
+    margin-bottom: 10px;
+    font-family: "Montserrat", "Sorts Mill Goudy", sans-serif;
 }
 
 input{
@@ -294,7 +292,7 @@ footer p{
     /* border-radius: 5px; */
 }
 
-#send:hover{
+#send:hover, #message_close:hover{
     background-color: #1d213b;
     border: 2px solid #7692ab;
     color: #fad02c;
@@ -302,6 +300,47 @@ footer p{
 
 #connect li p:hover{
     border-bottom: 2px solid #fad02c;
+}
+
+#receive{
+    position: fixed;
+    background-color: #1d213b80;
+    width: 100%;
+    height: 100vmin;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#receive>div{
+    width: 300px;
+    height: 50vmin;
+    background-color: #333652;
+    box-shadow: 0 0 2px 2px #fad02c;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#close{
+    padding: 10px 0;
+    width: 200px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    color: #e9eaec;
+    background-color: #7692ab;
+    transition: background-color .5s, border .5s;
+    cursor: pointer;
+}
+
+#receive.hide{
+    display: none;
+    opacity: 0;
+    width: 0px;
 }
 
 @media (max-width: 900px) {
