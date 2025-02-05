@@ -174,15 +174,22 @@ h3, #connect>p{
 h3+ul li, #projects h2+ul li, #certificates h2+ul li{
     background-color: #90adc6;
     border-radius: 10px;
-    padding: 10px 10px 20px;
+    padding: 10px 10px;
 }
 
 #skill_webdev h3+ul, #skill_other h3+ul, #projects h2+ul, #certificates h2+ul{
     flex-wrap: wrap;
 }
 
-#certificates h2+ul li{
+#certificates h2+ul li, #projects h2+ul li{
     margin-bottom: 40px;
+}
+
+#certificates div{
+    margin-top: 10px;
+}
+#certificates div p{
+    text-align: center;
 }
 
 #projects, #skill, #certificates{
@@ -192,15 +199,21 @@ h3+ul li, #projects h2+ul li, #certificates h2+ul li{
 }
 
 #projects a{
-    color: #e9eaec;
+    color: #fad02c;
+    margin-top: 10px;
 }
 
 #projects img, #projects div, #certificates img, #certificates div{
-    max-width: 270px;
+    width: 270px;
+}
+
+#projects img, #certificates img{
+    aspect-ratio: 16/9;
 }
 
 #projects div p:first-of-type, #certifates div p:first-of-type{
    margin-bottom: 20px;
+   text-align: center;
 }
 
 #projects h3, #certificate h3{
